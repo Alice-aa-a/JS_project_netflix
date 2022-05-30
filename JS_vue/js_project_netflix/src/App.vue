@@ -1,5 +1,6 @@
 <template>
-  <NetHeader />
+  <NetGlide/>
+  <NetHeader/>
   <NetCategory CategoryTitle="Les plus populaires" />
   <div class="row category_movies">
     <div v-for="item in popular_img_row" v-bind:key="item">
@@ -26,15 +27,22 @@
   </div>
 </template>
 
+
 <script>
+
 import NetHeader from "./components/NetHeader.vue";
 import NetCategory from "./components/NetCategory.vue";
+
+
+
+
 
 export default {
   name: "App",
   components: {
     NetHeader,
     NetCategory,
+    NetGlide,
   },
   methods: {
     // 88c4843d6d8ef0d81c32ff4f6d73cc2a
