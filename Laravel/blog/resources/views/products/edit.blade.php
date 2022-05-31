@@ -14,9 +14,9 @@
     </div>
     @endif-->
 
-    <form action="{{ route('products.update'), $product }}" method="post">
+    <form action="{{ route('products.update'), $product }}" method="post" enctype="multipart/form-data">
         @method('PUT')
-        @csrf <!--sécuriser formulaire-->
+        @csrf
 
         <div class="input-group">
             <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ $product->name }}"/>
@@ -36,8 +36,10 @@
             @enderror
         </div>
 
-        <input type="text" name="image" id="image" class="form-control" value="{{$product->image}}"/>
-
+        <input type="file" name="image" id="image" class="form-control" value="{{$product->image}}"/>
+        @if ($product->'image')
+            <img src="{{$product->image}}" alt="" width="200"/>
+        @endif
 
         <div class="input-group">
             <input type="text" name="price" id="price" class="form-control @error('price') is-invalid @enderror" value="{{ $product->price }}"/>
