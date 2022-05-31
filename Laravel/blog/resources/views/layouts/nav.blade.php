@@ -8,6 +8,7 @@
                 <a class="nav-item nav-link" href="#">Pricing</a>
                 <a class="nav-item nav-link disabled" href="#">Disabled</a>
                 <a class="nav-link" href="{{route('products.index')}}">Liste des produits</a>
+                <a class="nav-link" href="{{route('products.create')}}">Créer un produit</a>
             </div>
         </div>
     </nav>
