@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title',  'Création')
 @section('content')
+    <br/>
     <H1> Créer un produit</H1>
 
     <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">

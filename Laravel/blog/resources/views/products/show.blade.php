@@ -3,6 +3,7 @@
 @section('title', $product->name)
 
 @section('content')
+    <br/>
     <H1> Produit</H1>
     <strong> {{$product->name}} </strong>
     <p> {{$product->description}} </p>

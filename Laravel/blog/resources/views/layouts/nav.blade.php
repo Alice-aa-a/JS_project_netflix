@@ -13,6 +13,16 @@
                 <a class="nav-link" href="{{route('home')}}">Accueil</a>
                 <a class="nav-link" href="{{route('products.index')}}">Liste des produits</a>
                 <a class="nav-link" href="{{route('products.create')}}">Créer un produit</a>
+
+                @guest
+                        <a class="nav-link" href="{{route('login')}}">Connexion</a>
+                        <a class="nav-link" href="{{route('login')}}">S'inscrire</a>
+                @endguest
+                @auth
+                        <a class="nav-link" href="{{route('logout')}}">Se déconnecter</a>
+                @endauth
+
+
             </div>
         </div>
     </nav>

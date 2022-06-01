@@ -2,6 +2,7 @@
 @section('title','Liste des produits')
 
 @section('content')
+    <br/>
     <H1> Liste produits</H1>
 <div style="display: flex; flex-wrap: wrap;">
     @foreach    ($products as $product)
