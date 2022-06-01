@@ -13,7 +13,9 @@
                 <strong> {{$product->name}} </strong>
                 <p> {{$product->price}} €</p>
                 <a href="{{ route('products.show', $product) }}">Voir le produit</a>
+                @can('update', $product)
                 <a href="{{ route('products.edit', $product) }}">Modifier</a>
+                @endcan
                 <a href="{{ route('products.download', $product) }}">PDF</a>
                 <a href="{{ route('products.send-mail', $product) }}">Mail</a>
 
