@@ -6,10 +6,29 @@
     <H1> S'inscrire</H1>
     <br/>
 
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <form action="{{ route('register') }}" method="post">
         @method('POST')
         @csrf
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input type="name" class="form-control" id="name" value="{{old('name')}}">
+            @error('name')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email</label>
@@ -32,7 +51,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Comfirmer le mot de passe</label>
+            <label for="password_confirmation" class="form-label">Comfirmer le mot de passe</label>
             <input type="password" class="form-control" id="password_confirmation">
             @error('password')
                 <div class="invalid-feedback">

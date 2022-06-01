@@ -16,7 +16,7 @@
 
                 @guest
                         <a class="nav-link" href="{{route('login')}}">Connexion</a>
-                        <a class="nav-link" href="{{route('login')}}">S'inscrire</a>
+                        <a class="nav-link" href="{{route('register')}}">S'inscrire</a>
                 @endguest
                 @auth
                         <a class="nav-link" href="{{route('logout')}}">Se déconnecter</a>
