@@ -12,7 +12,6 @@
     <body>
 
         @include('layouts.nav')
-        <div>Menu</div>
 
         <div class="container">
             @yield('content')
