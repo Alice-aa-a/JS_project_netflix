@@ -3,5 +3,5 @@
     <strong> {{$product->name}} </strong>
     <p> {{$product->description}} </p>
     <p> {{$product->price}} € </p>
-    <img src="{{public_path($product->image}}" alt="" width="200"/>
+    <img src="{{ public_path($product->image) }}" alt="" width="200"/>
     </div>
